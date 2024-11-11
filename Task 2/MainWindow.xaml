@@ -1,0 +1,24 @@
+﻿<Window x:Class="Lab5._2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Text Editor" Height="337.649" Width="522.728"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <ToolBar Height="31" VerticalAlignment="Top" Grid.ColumnSpan="2">
+            <Button Click="Underline_Click">
+                <TextBlock Text="U" TextDecorations="Underline"/>
+            </Button>
+            <Button Click="Strikethrough_Click">
+                <TextBlock Text="S" TextDecorations="Strikethrough"/>
+            </Button>
+        </ToolBar>
+
+        <RichTextBox x:Name="textBox" Margin="0,31,0,0" Grid.ColumnSpan="2" Height="291" VerticalAlignment="Top">
+            <FlowDocument>
+                <Paragraph>
+                    <Run Text=""/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+    </Grid>
+</Window>
